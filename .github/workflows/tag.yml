@@ -1,12 +1,13 @@
 name: Tag
 
 on:
-  push:
-    branches:
-      - main
-
+  pull_request:
+    branches: [master]
+    types: [closed]
+  
 jobs:
   tag:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'ruby')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
