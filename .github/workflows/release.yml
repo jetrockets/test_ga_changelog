@@ -1,0 +1,24 @@
+name: Tag and Release
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Changelog
+        id: github_release
+        uses: mikepenz/release-changelog-builder-action@{latest-release}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Release
+        uses: softprops/action-gh-release@{latest-release} #softprops/action-gh-release
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{steps.github_release.outputs.changelog}}

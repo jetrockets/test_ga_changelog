@@ -16,18 +16,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Changelog
-        id: github_release
-        uses: mikepenz/release-changelog-builder-action@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create Release
-        uses: mikepenz/action-gh-release@main #softprops/action-gh-release
-        with:
-          tag: ${{ steps.tag_version.outputs.new_tag }}
-          body: ${{steps.github_release.outputs.changelog}}
-
       # - name: Create a GitHub release
       #   uses: ncipollo/release-action@v1
       #   with:
