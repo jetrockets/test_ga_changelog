@@ -25,6 +25,7 @@ jobs:
       - name: Create Release
         uses: mikepenz/action-gh-release@main #softprops/action-gh-release
         with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
           body: ${{steps.github_release.outputs.changelog}}
 
       # - name: Create a GitHub release
