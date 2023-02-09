@@ -2,7 +2,6 @@
 
 class AwesomeGem < Curated::RubyGem
   package 'awesome_gem'
-  category :authentication
   info 'Awesome Gem'
   homepage 'https://github.com/awesome_gem/awesome_gem'
 

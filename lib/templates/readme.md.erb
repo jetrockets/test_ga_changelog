@@ -1,7 +1,10 @@
 # Curated list of libraries used by JetRockets
 
-<% curated_list.each do |curated| %>
-  ## [# <%= curated.name %>](#<%= curated.name %>)
+<% curated_list.each do |category, curates| %>
+  ## <%= category.name %>
+
+  <% curates.each do |curated| %>
+  ### [# <%= curated.name %>](#<%= curated.name %>)
 
   <% if curated.homepage %>
     [<%= curated.homepage %>](<%= curated.homepage %>)
@@ -10,7 +13,7 @@
   <%= curated.info if curated.info %>
 
   <% if curated.pros.any? %>
-  ### 🟢 Pros
+  #### 🟢 Pros
 
   <% curated.pros.each do |pros| %>
     * <%= pros %>
@@ -18,7 +21,7 @@
   <% end %>
 
   <% if curated.cons.any? %>
-  ### 🟡 Cons
+  #### 🟡 Cons
 
   <% curated.cons.each do |cons| %>
     * <%= cons %>
@@ -30,5 +33,6 @@
       <%= comment %>
     </em>
 
+  <% end %>
   <% end %>
 <% end %>

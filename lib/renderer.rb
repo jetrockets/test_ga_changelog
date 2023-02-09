@@ -11,6 +11,6 @@ class Renderer
   end
 
   def curated_list
-    Curated.descendants
+    Curated.descendants.group_by(&:category).sort_by { |category, _| category.name }
   end
 end

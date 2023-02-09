@@ -3,6 +3,7 @@
 require 'gems'
 
 require_relative 'renderer'
+require_relative 'category'
 
 class Curated
   def self.inherited(subclass)
@@ -34,6 +35,18 @@ class Curated
           end                                          # end
         EOS
       end
+    end
+
+    def category(val = nil)
+      if val.nil?
+        if instance_variable_defined?(:@category)
+          return @category
+        else
+          return Category::Other
+        end
+      end
+
+      @category = val
     end
 
     def pros(val = nil)
@@ -79,7 +92,6 @@ class Curated
   attr_rw :package
   attr_rw :name
   attr_rw :homepage
-  attr_rw :category
   attr_rw :info
 end
 

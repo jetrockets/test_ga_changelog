@@ -3,6 +3,7 @@
 class Authlogic < Curated::RubyGem
   package 'authlogic'
   homepage 'https://github.com/binarylogic/authlogic'
+  category Category::Authentication
 
   pros 'It is easy to use and provides a simple, clean API for handling authentication.'
   pros 'It has built-in support for common authentication features such as password encryption, password reset, email activation, and session management.'

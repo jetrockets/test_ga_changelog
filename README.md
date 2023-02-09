@@ -1,38 +1,13 @@
 # Curated list of libraries used by JetRockets
 
-## [# not_so_awesome](#not_so_awesome)
+## Authentication
 
-
-
-
-
-## [# awesome_gem](#awesome_gem)
-
-  [https://github.com/awesome_gem/awesome_gem](https://github.com/awesome_gem/awesome_gem)
-
-awesome_gem is the best
-### 🟢 Pros
-
-  * We like it because it is awesome.
-
-### 🟡 Cons
-
-  * We don't like it because it is not awesome.
-
-  <em>
-    
-  This is
-
-  a long comment
-  
-  </em>
-
-## [# authlogic](#authlogic)
+### [# authlogic](#authlogic)
 
   [https://github.com/binarylogic/authlogic](https://github.com/binarylogic/authlogic)
 
 An unobtrusive ruby authentication library based on ActiveRecord.
-### 🟢 Pros
+#### 🟢 Pros
 
   * It is easy to use and provides a simple, clean API for handling authentication.
   * It has built-in support for common authentication features such as password encryption, password reset, email activation, and session management.
@@ -46,5 +21,34 @@ An unobtrusive ruby authentication library based on ActiveRecord.
 
   <em>
     This is another comment
+  </em>
+
+## Other
+
+### [# not_so_awesome](#not_so_awesome)
+
+
+
+
+
+### [# awesome_gem](#awesome_gem)
+
+  [https://github.com/awesome_gem/awesome_gem](https://github.com/awesome_gem/awesome_gem)
+
+awesome_gem is the best
+#### 🟢 Pros
+
+  * We like it because it is awesome.
+
+#### 🟡 Cons
+
+  * We don't like it because it is not awesome.
+
+  <em>
+    
+  This is
+
+  a long comment
+  
   </em>
 
