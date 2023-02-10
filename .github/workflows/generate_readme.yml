@@ -26,3 +26,4 @@ jobs:
         commit_options: --signoff
         commit_user_name: GitHub Actions
         file_pattern: README.md
+        branch: main
