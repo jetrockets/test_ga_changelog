@@ -10,7 +10,9 @@ class Renderer
     File.write('README.md', erb.result(binding))
   end
 
-  def curated_list
+  protected
+
+  def ruby_curates
     Curated.descendants.group_by(&:category).sort_by { |category, _| category.name }
   end
 end
